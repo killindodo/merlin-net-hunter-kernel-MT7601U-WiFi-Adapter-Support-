@@ -120,12 +120,18 @@ bash
 airmon-ng start wlan2    # answer 'n' if it prompts about phy0 (that's the phone's internal WiFi — leave it alone)
 iw dev wlan2 info        # confirm "type monitor"
 airodump-ng wlan2        # confirm live packet capture
+
 Known Quirks / Notes
+
 A transient mt7601u ... Vendor request req:07 off:101c failed:-71 (EPROTO) can show up during init. In this case the driver retried and completed initialization successfully — it wasn't fatal. If it is persistent/fatal for you, suspect USB power delivery (try a powered OTG hub) or a marginal OTG cable/connector.
 airmon-ng sometimes prompts about phy0 (the phone's internal WiFi chip) — always decline that (n) unless you actually mean to touch the internal adapter.
 If you're on zsh rather than bash, patterns like .[!.]* break due to ! history expansion. Use .??* instead when moving hidden files.
 iwconfig may fail to install due to a wireless-tools/systemd dependency conflict — not needed; iw covers the same functionality and is the modern replacement.
+
 Credits
+
 Kernel base: amamarante92/nethunter-kernel-redminote9
+
 Toolchain: kdrag0n/proton-clang
+
 Debugged and built by @killindodo

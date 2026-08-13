@@ -1,4 +1,4 @@
-MT7601U WiFi Adapter Support on Kali NetHunter (Redmi Note 9 / merlin)
+                                MT7601U WiFi Adapter Support on Kali NetHunter (Redmi Note 9 / merlin)
 
 Enabling a MediaTek MT7601U USB WiFi dongle on a custom Kali NetHunter kernel for the Redmi Note 9, by finding, patching, and building the kernel with driver support compiled in.
 
